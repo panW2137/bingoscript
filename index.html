@@ -6,28 +6,58 @@
     , initial-scale=1.0">
     <title>bingo card generator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js">
 
-    </script>
 </head>
 <body>
     <div class="wrapper" id="wrapper">
-
-        <div class="property_editor" id="edit_prop">
-            <button onclick="print_page()"> print </button>
+        <div class="mainPanel" id="mainMenu">
+            <div class="menu">
+                <div onclick="change_editor_mode(0)">
+                    properties
+                </div>
+    
+                <div onclick="change_editor_mode(1)">
+                    styles
+                </div>
+    
+                <div onclick="change_editor_mode(2)">
+                    content
+                </div>
+            </div>
+    
+            <div class="panel" id="edit_content">
+                
+            </div>
+    
+            <div class="panel" id="edit_style">
+    
+            </div>
+    
+            <div class="panel" id="edit_num">
+    
+            </div>    
         </div>
-
-        <div class="bingo_numbers_editor" id="edit_num">
-
-        </div>
-
+        
         <div class="div_row" id="div_row">
-            visualisation
+            <div>
+                <button onclick="print_page()"> print </button>
+            </div>
+            <div>
+                <p> scale </p>
+                <input type="range" id="vis_scale" min="0" max ="1" step="0.01">                
+            </div>
+            <div>
+               
+            </div>
         </div>
 
-        <div class="visualisation">
+        <div class="visualisation" id="visualisation">
             lasdkjgmn
         </div>
     </div>
+
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
