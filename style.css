@@ -37,7 +37,7 @@
 }
 
 .panel{
-    height: 350px;
+    height: 450px;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: lightgray;
@@ -78,4 +78,30 @@
     background-color: red;
     width: 100vw;
     height: 141.27vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.5);
+}
+
+.slotContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.slotContainerRow{
+    display: flex;
+    flex-direction: row;
+    padding: 2.5px;
+}
+
+.slot {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 15vw;
+    height: 15vw;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
