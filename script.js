@@ -1,5 +1,4 @@
 let editorMode = 0
-let slotList = []
 update_main_panel()
 generate_bingo()
 
@@ -51,22 +50,44 @@ function generate_bingo(){
     let bingoCard = document.getElementById("visualization")
     let slotContainer = document.getElementById("slotContainer")
     let counter = 0; //temporary, remove later, probably
-    for(let i=0; i<5; i++){
-        //create new row
-        let newRow = document.createElement("div")
-        newRow.setAttribute("class","slotContainerRow")
+    let rows = document.getElementById("input_rows").value
+    let cols = document.getElementById("input_columns").value
 
-        for(let j=0; j<5; j++){
+    //clear the table
+    slotContainer.innerHTML = ""
+
+    //fetch styles from inputs
+    let slotWidth = document.getElementById("input_width").value
+    let slotHeight = document.getElementById("input_height").value
+    let colSpace = document.getElementById("input_col_dist").value
+    let rowSpace = document.getElementById("input_row_dist").value
+
+
+    //generate the table
+    for(let i=0; i<rows; i++){
+
+        //create new row
+        let newRow = document.createElement("tr")
+        newRow.setAttribute("class","slotContainerRow")
+    
+        for(let j=0; j<cols; j++){
             //create new element
-            let newSlot = document.createElement("div")
+            let newSlot = document.createElement("td")
             let newText = document.createTextNode("element "+counter)
             //add class and text
             newSlot.setAttribute("class","slot")
             newSlot.appendChild(newText)
+            //add styles
+            newSlot.style.width = slotWidth+"vw"
+            newSlot.style.height = slotHeight+"vw"
+            newSlot.style.marginTop = (rowSpace/2)+"vw"
+            newSlot.style.marginBottom = (rowSpace/2)+"vw"
+            newSlot.style.marginLeft = (colSpace/2)+"vw"
+            newSlot.style.marginRight = (colSpace/2)+"vw"
 
             //add slot to the row and to the array
             newRow.appendChild(newSlot)
-            slotList.push(newSlot)
+            //slotList.push(newSlot)
 
             counter++ //remove later
         }

@@ -26,7 +26,32 @@
             </div>
     
             <div class="panel" id="edit_content">
+                <div>
+                    <div>
+                        <input type="number" min="3" max="7" value="5" id="input_rows" onchange="generate_bingo()"> rows
+                    </div>
+                    <div>
+                        <input type="number" min="3" max="7" value="5" id="input_columns" onchange="generate_bingo()"> columns
+                    </div>
+                </div>
                 
+                <div>
+                    <div>
+                        <input type="number" min="0" max="100" step="0.1" value="15" id="input_width" onchange="generate_bingo()">width
+                    </div>
+                    <div>
+                        <input type="number" min="0" max="100" step="0.1" value="15" id="input_height" onchange="generate_bingo()"> height
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="number" min="0" max="100" step="0.1" value="2" id="input_col_dist" onchange="generate_bingo()">distance between columns
+                    </div>
+                    <div>
+                        <input type="number" min="0" max="100" step="0.1" value="2" id="input_row_dist" onchange="generate_bingo()">distance between rows
+                    </div>
+                </div>
             </div>
     
             <div class="panel" id="edit_style">
@@ -53,9 +78,9 @@
         </div>
 
         <div class="visualisation" id="visualisation">
-            <div class="slotContainer" id="slotContainer">
+            <table class="slotContainer" id="slotContainer">
 
-            </div>
+            </table>
         </div>
     </div>
 
