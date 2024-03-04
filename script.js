@@ -1,6 +1,7 @@
 let editorMode = 0
 update_main_panel()
 update_bingo()
+updateContent()
 
 //function prints page
 //change later
@@ -34,4 +35,25 @@ function update_main_panel(){
 
     menuOptions[editorMode].style.backgroundColor = 'lightGray'
     panelList[editorMode].style.display = 'flex'
+}
+
+//move into another file later
+function updateContent(){
+    //declare an array for content
+    let contentArray = []
+    //fetch the input from user and divide it into set of substrings
+    let textAreaContent = document.getElementById("textarea").value
+    contentArray = textAreaContent.split("\n")
+
+    //if array to small fill it with empty text
+    while(contentArray.length < 25){
+        contentArray.push("")
+    }
+
+    //fill the bingo slots with new content
+    //TODO: ability to randomize order
+    let bingoSlots = document.getElementsByClassName("slot")
+    for(let i=0; i<bingoSlots.length; i++){
+        bingoSlots[i].innerHTML = contentArray[i]
+    }
 }

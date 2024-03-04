@@ -13,11 +13,11 @@
         <div class="mainPanel" id="mainMenu">
             <div class="menu">
                 <div onclick="change_editor_mode(0)">
-                    properties
+                    bingo slots
                 </div>
     
                 <div onclick="change_editor_mode(1)">
-                    styles
+                    card style
                 </div>
     
                 <div onclick="change_editor_mode(2)">
@@ -59,7 +59,7 @@
             </div>
     
             <div class="panel" id="edit_num">
-                <textarea id="textarea">
+                <textarea id="textarea" onchange="updateContent()">
                 </textarea>
             </div>  
 
@@ -85,11 +85,11 @@
             </table>
         </div>
     </div>
-    <script src="eventListeners.js">
-        
-    </script>
     <script src="generate.js">
 
+    </script>
+    <script src="eventListeners.js">
+        
     </script>
     <script src="script.js">
 
