@@ -72,7 +72,7 @@
     letter-spacing: 1px;
 }
 
-.visualisation{
+.visualization{
     transform-origin: top;
     transition: transform 0.05s;
     background-color: red;

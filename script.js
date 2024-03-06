@@ -1,6 +1,7 @@
 let editorMode = 0
 update_main_panel()
 update_bingo()
+update_style()
 updateContent()
 
 //function prints page

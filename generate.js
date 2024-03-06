@@ -4,8 +4,7 @@ this file is responsible for generating bingo card (visualization) and css style
 */
 
 //fetch the elements of bingo card
-let bingoCard = document.getElementById("visualization")
-let slotContainer = document.getElementById("slotContainer")
+
 
 //properties
 let rows

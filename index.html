@@ -76,7 +76,17 @@
             </div>
     
             <div class="panel" id="edit_style">
-    
+                <div>
+                    <div>
+                        <input type="color" id="input_bg_color" onchange="update_style()"> background color
+                    </div>
+                    <div>
+                        <input type="file" id="input_bg_img" accept="image/*" onchange="update_style()"> background image
+                    </div>
+                    <div>
+                        <input type="checkbox" id="input_bg_option" onchange="update_style()"> use image
+                    </div>
+                </div>
             </div>
     
             <div class="panel" id="edit_num">
@@ -100,13 +110,19 @@
         </div>
     
 
-        <div class="visualisation" id="visualisation">
+        <div class="visualization" id="visualization">
             <table class="slotContainer" id="slotContainer">
 
             </table>
         </div>
     </div>
+    <script src="let.js">
+
+    </script>
     <script src="generate.js">
+
+    </script>
+    <script src="style.js">
 
     </script>
     <script src="eventListeners.js">
