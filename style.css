@@ -40,9 +40,11 @@
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: lightgray;
+    display: flex;
     display: none;
     width: 100vw;
     height: 350px;
+    flex-wrap: wrap;
 }
 
 
@@ -75,13 +77,15 @@
 .visualization{
     transform-origin: top;
     transition: transform 0.05s;
-    background-color: red;
+    
+    background-image: url("D:/github/bingoscript/Nowy folder/FFdKHA7X0AQCkVv.png");
     width: 100vw;
     height: 141.27vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     transform: scale(0.5);
+    flex-direction: column;
 }
 
 .slotContainer {

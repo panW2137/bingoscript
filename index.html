@@ -61,7 +61,7 @@
 
                 <div>
                     <div>
-                        <input type="color" id="input_slot_bg_color" onchange="update_bingo()"> border color
+                        <input type="color" id="input_slot_bg_color" onchange="update_bingo()"> slot color
                     </div>
                 </div>
 
@@ -73,6 +73,50 @@
                         <input type="number" id="input_slot_roundness" min="0" max="100" value="0" onchange="update_bingo()"> border roundness
                     </div>
                 </div>
+
+                <div>
+                    <div>
+                        <input type="number" id="input_border_size" min="0" max="50" value="0" onchange="update_bingo()"> border size
+                    </div>
+                    <div>
+                        <select id="input_border_type" onchange="update_bingo()">
+                            <option value="solid">solid</option>
+                            <option value="dashed">dashed</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="groove">groove</option>
+                            <option value="ridge">ridge</option>
+                            <option value="inset">inset</option>
+                            <option value="outset">outset</option>
+                            <option value="none">none</option>
+                        </select> border type
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <input type="text" id="input_bingo_title" onchange="update_bingo()"> title
+                    </div>
+                    <div>
+                        <input type="number" min="0" max="1000" id="input_title_size" value="0" onchange="update_bingo()"> title size
+                    </div>
+                    <div>
+                        <select onchange="update_bingo()" id="input_title_font">
+
+                        </select>title font
+                    </div>
+                    <div>
+                        <select onchange="update_bingo()" id="input_bingo_tit_align">
+                            <option value="center">center</option>
+                            <option value="left">left</option>
+                            <option value="right">right</option>
+                            <option value="justify">justify</option>
+                        </select>title alignment
+                    </div>
+                    <div>
+                        <input type="color" id="input_title_color" onchange="update_bingo()">title color
+                    </div>
+                </div>
             </div>
     
             <div class="panel" id="edit_style">
@@ -81,10 +125,10 @@
                         <input type="color" id="input_bg_color" onchange="update_style()"> background color
                     </div>
                     <div>
-                        <input type="file" id="input_bg_img" accept="image/*" onchange="update_style()"> background image
+                        <input type="file" id="input_bg_img" accept="image/*"> background image
                     </div>
                     <div>
-                        <input type="checkbox" id="input_bg_option" onchange="update_style()"> use image
+                        <button onclick="clear_bg_img()">clear img</button>
                     </div>
                 </div>
             </div>
@@ -111,9 +155,15 @@
     
 
         <div class="visualization" id="visualization">
+            <div>
+                <h1 id="bingoTitle"> bingo </h1>
+            </div>
             <table class="slotContainer" id="slotContainer">
 
             </table>
+            <div>
+
+            </div>
         </div>
     </div>
     <script src="let.js">

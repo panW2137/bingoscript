@@ -27,6 +27,15 @@ let slotOpac
 
 //border
 let borderRoundness
+let borderSize
+let borderType
+
+//title
+let titleText
+let titleFont
+let titleColor
+let titleAlignment
+let titleSize
 
 
 //generates slots of bingo card within visualization
@@ -57,15 +66,25 @@ function fetch_generate_values(){
     colSpace = document.getElementById("input_col_dist").value
     rowSpace = document.getElementById("input_row_dist").value
     //color
-    slotBgCol = document.getElementById("input_border_color").value
-    slotBorderCol = document.getElementById("input_slot_bg_color").value  
+    slotBorderCol = document.getElementById("input_border_color").value
+    slotBgCol = document.getElementById("input_slot_bg_color").value  
     slotOpac = document.getElementById("input_slot_opacity").value
     //border
     borderRoundness = document.getElementById("input_slot_roundness").value
+    borderType = document.getElementById("input_border_type").value
+    borderSize = document.getElementById("input_border_size").value
+    //title
+    titleText = document.getElementById("input_bingo_title").value
+    titleAlignment = document.getElementById("input_bingo_tit_align").value
+    titleSize = document.getElementById("input_title_size").value
+    titleColor = document.getElementById("input_title_color").value
+    titleFont = document.getElementById("input_title_font").value
 }
 
 function generate_bingo(){
     //let counter = 0; //temporary, remove later, probably
+
+    titleDiv.innerHTML = titleText
 
     for(let i=0; i<rows; i++){ //row
         //create new row
@@ -111,11 +130,18 @@ function generate_bingo_style(){
         slot.style.marginRight = (colSpace/2)+"vw"
 
         //color
-        slot.style.border = "1px solid "+slotBorderCol
+        //slot.style.border = "1px solid "+slotBorderCol
         slot.style.backgroundColor = slotBgCol
         slot.style.opacity = slotOpac/100
 
         //border
         slot.style.borderRadius = borderRoundness + "%"
+        slot.style.border = borderSize+"px "+borderType+" "+slotBorderCol
+
+        //title
+        titleDiv.style.color = titleColor
+        titleDiv.style.textAlign = titleAlignment
+        titleDiv.style.fontSize = titleSize+"px"
+        titleDiv.style.fontFamily = "Arial" // change later
     }
 }

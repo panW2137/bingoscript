@@ -7,7 +7,6 @@
 //background
 let bgColor 
 let bgImg
-let useImg = document.getElementById("input_bg_option").checked
 
 function update_style(){
     fetch_style_values()
@@ -22,8 +21,8 @@ function fetch_style_values(){
 
 function generate_background_style(){
     bingoCard.style.backgroundColor = bgColor
-    //fix later
-    //if((useImg)){
-    //    bingoCard.style.backgroundImage = "url("+bgImg+")"
-    //}
+}
+
+function clear_bg_img(){
+    document.getElementById('visualization').style.backgroundImage = "none"
 }
