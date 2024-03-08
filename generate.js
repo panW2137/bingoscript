@@ -136,12 +136,12 @@ function generate_bingo_style(){
 
         //border
         slot.style.borderRadius = borderRoundness + "%"
-        slot.style.border = borderSize+"px "+borderType+" "+slotBorderCol
+        slot.style.border = (borderSize/30)+"vw "+borderType+" "+slotBorderCol
 
         //title
         titleDiv.style.color = titleColor
-        titleDiv.style.textAlign = titleAlignment
-        titleDiv.style.fontSize = titleSize+"px"
+        titleDiv.style.textAlign = titleAlignment //fix later
+        titleDiv.style.fontSize = (titleSize)+"px"
         titleDiv.style.fontFamily = "Arial" // change later
     }
 }

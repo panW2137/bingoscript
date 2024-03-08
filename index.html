@@ -9,6 +9,8 @@
 
 </head>
 <body>
+    <div class="anchor" id="anchor1"></div>
+    <div class="anchor" id="anchor2"></div>
     <div class="wrapper" id="wrapper">
         <div class="mainPanel" id="mainMenu">
             <div class="menu">
@@ -61,7 +63,7 @@
 
                 <div>
                     <div>
-                        <input type="color" id="input_slot_bg_color" onchange="update_bingo()"> slot color
+                        <input type="color" id="input_slot_bg_color" value="#ffffff" onchange="update_bingo()"> slot color
                     </div>
                 </div>
 
@@ -76,7 +78,7 @@
 
                 <div>
                     <div>
-                        <input type="number" id="input_border_size" min="0" max="50" value="0" onchange="update_bingo()"> border size
+                        <input type="number" id="input_border_size" min="0" max="50" value="10" onchange="update_bingo()"> border size
                     </div>
                     <div>
                         <select id="input_border_type" onchange="update_bingo()">
@@ -95,10 +97,10 @@
 
                 <div>
                     <div>
-                        <input type="text" id="input_bingo_title" onchange="update_bingo()"> title
+                        <input type="text" value="bingo" id="input_bingo_title" onchange="update_bingo()"> title
                     </div>
                     <div>
-                        <input type="number" min="0" max="1000" id="input_title_size" value="0" onchange="update_bingo()"> title size
+                        <input type="number" min="0" max="1000" id="input_title_size" value="10" onchange="update_bingo()"> title size
                     </div>
                     <div>
                         <select onchange="update_bingo()" id="input_title_font">
@@ -122,7 +124,7 @@
             <div class="panel" id="edit_style">
                 <div>
                     <div>
-                        <input type="color" id="input_bg_color" onchange="update_style()"> background color
+                        <input type="color" value="#aaaaaa" id="input_bg_color" onchange="update_style()"> background color
                     </div>
                     <div>
                         <input type="file" id="input_bg_img" accept="image/*"> background image
@@ -140,7 +142,9 @@
 
             <div class="div_row" id="div_row">
                 <div>
-                    <button onclick="print_page()"> print </button>
+                    <button onclick="print_page(1)"> 1x A4 </button>
+                    <button onclick="print_page(2)"> 2x A5 </button>
+                    <button onclick="print_page(3)"> 4x A6 </button>
                 </div>
                 <div>
                     <p> scale </p>
@@ -155,7 +159,7 @@
     
 
         <div class="visualization" id="visualization">
-            <div>
+            <div class="titleWrapper">
                 <h1 id="bingoTitle"> bingo </h1>
             </div>
             <table class="slotContainer" id="slotContainer">

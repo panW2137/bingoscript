@@ -75,7 +75,7 @@
 }
 
 .visualization{
-    transform-origin: top;
+    transform-origin:top;
     transition: transform 0.05s;
     
     background-image: url("D:/github/bingoscript/Nowy folder/FFdKHA7X0AQCkVv.png");
@@ -123,4 +123,16 @@ textarea {
     color: #333333;
     line-height: 120%;
     overflow: scroll;
+}
+
+.titleWrapper {
+    width: 100%;
+}
+
+.anchor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform-origin: top left;
+    background-color: red;
 }
